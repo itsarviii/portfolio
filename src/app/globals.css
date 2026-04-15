@@ -46,6 +46,7 @@
 }
 
 html {
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--fg);
   -webkit-text-size-adjust: 100%;
