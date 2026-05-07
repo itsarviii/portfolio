@@ -10,6 +10,7 @@ import ThemeProvider from "@/components/layout/ThemeProvider";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CustomCursor from "@/components/ui/CustomCursor";
 import "./globals.css";
 
 const inter = Inter({
@@ -79,6 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="flex min-h-dvh flex-col bg-bg text-fg antialiased">
         <ThemeProvider>
+          <CustomCursor />
           <SmoothScroll />
           <Navbar />
           <main className="flex-1 pt-(--nav-h)">{children}</main>
