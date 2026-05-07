@@ -85,6 +85,7 @@ export default function Hero() {
             {greeting && (
               <p
                 ref={greetingRef}
+                data-hero-item
                 className="mb-4 ml-1 font-display text-[clamp(1.25rem,2.5vw,1.75rem)] italic leading-none text-muted md:mb-6 md:ml-2"
               >
                 {greeting}
@@ -112,6 +113,7 @@ export default function Hero() {
 
           <p
             ref={roleRef}
+            data-hero-item
             className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-muted md:mt-8"
           >
             {site.role}
@@ -120,6 +122,7 @@ export default function Hero() {
           {site.available && (
             <div
               ref={chipRef}
+              data-hero-item
               className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-surface/60 px-3 py-1 text-[11px] font-medium text-muted backdrop-blur"
             >
               <span className="relative flex h-1.5 w-1.5">
@@ -133,6 +136,7 @@ export default function Hero() {
           {subtitle && (
             <p
               ref={subtitleRef}
+              data-hero-item
               className="mt-8 max-w-2xl text-[clamp(1.125rem,1.6vw,1.375rem)] leading-snug text-muted md:mt-10"
             >
               {subtitle}
@@ -141,6 +145,7 @@ export default function Hero() {
 
           <div
             ref={ctasRef}
+            data-hero-item
             className="mt-10 flex flex-wrap items-center justify-center gap-3 md:mt-12"
           >
             <MagneticButton>

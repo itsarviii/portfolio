@@ -105,6 +105,13 @@ body {
   to { transform: translateX(-33.333%); }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  [data-hero-item],
+  [data-name-char] {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

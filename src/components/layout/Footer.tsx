@@ -34,12 +34,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-border py-6">
       <Container>
-        <p className="flex items-center gap-2 font-mono text-xs text-muted">
-          © {year} {site.name} — Made with
-          <span className="text-accent">
+        <p className="font-mono text-xs text-muted">
+          © {year} {site.name} — Made with{" "}
+          <span className="inline-flex items-center align-middle text-accent">
             <PixelHeart />
           </span>
-          using Next.js & Tailwind CSS
+          {" "}using Next.js &amp; Tailwind CSS
         </p>
       </Container>
     </footer>
