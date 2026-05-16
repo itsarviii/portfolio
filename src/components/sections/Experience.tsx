@@ -80,9 +80,12 @@ export default function Experience() {
         const getNavH = () =>
           (document.querySelector("nav") as HTMLElement | null)?.offsetHeight ?? 72;
 
-        if (panels.length) gsap.set(panels, { opacity: 0.35 });
+        if (panels.length) {
+          gsap.set(panels, { opacity: 0.35 });
+          gsap.set(panels[0], { opacity: 1 });
+        }
 
-        let activeIndex = -1;
+        let activeIndex = 0;
 
         gsap.to(track, {
           x: () => -getDistance(),
@@ -94,6 +97,18 @@ export default function Experience() {
             start: () => `top top+=${getNavH()}`,
             end: () => `+=${getDistance()}`,
             invalidateOnRefresh: true,
+            onEnter() {
+              panels.forEach((panel, i) =>
+                gsap.set(panel, { opacity: i === 0 ? 1 : 0.35 }),
+              );
+              activeIndex = 0;
+            },
+            onLeaveBack() {
+              panels.forEach((panel, i) =>
+                gsap.set(panel, { opacity: i === 0 ? 1 : 0.35 }),
+              );
+              activeIndex = 0;
+            },
             onUpdate(self) {
               const dist = getDistance();
               const viewportCenter = self.progress * dist + window.innerWidth / 2;

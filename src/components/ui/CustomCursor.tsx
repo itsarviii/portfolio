@@ -22,10 +22,14 @@ export default function CustomCursor() {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
       setVisible(true);
+      if (!(e.target as Element).closest('a, button, [role="button"], input, textarea, select, label')) {
+        setHovering(false);
+      }
     };
 
     const onLeave = () => setVisible(false);
     const onEnter = () => setVisible(true);
+    const onClick = () => setHovering(false);
 
     const onOver = (e: MouseEvent) => {
       if ((e.target as Element).closest('a, button, [role="button"], input, textarea, select, label')) {
@@ -44,6 +48,7 @@ export default function CustomCursor() {
     document.addEventListener("mouseenter", onEnter);
     document.addEventListener("mouseover", onOver);
     document.addEventListener("mouseout", onOut);
+    document.addEventListener("click", onClick);
     document.body.classList.add("cursor-none");
 
     return () => {
@@ -52,6 +57,7 @@ export default function CustomCursor() {
       document.removeEventListener("mouseenter", onEnter);
       document.removeEventListener("mouseover", onOver);
       document.removeEventListener("mouseout", onOut);
+      document.removeEventListener("click", onClick);
       document.body.classList.remove("cursor-none");
     };
   }, [pointerFine, reduced, mouseX, mouseY]);

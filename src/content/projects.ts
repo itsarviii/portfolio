@@ -40,7 +40,7 @@ export const projects: Project[] = [
     summary:
       "Bartender learning companion with 200+ cocktail recipes, XP-based progression, interactive games, and 9 unlockable achievement badges.",
     role: "Solo",
-    year: "2026",
+    year: "2025",
     stack: ["Next.js 15", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui"],
     image: null,
     previewBg: "#f59e0b",
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     summary:
       "Privacy-first, fully client-side ATS resume builder — drag-and-drop sections, two templates, accent colour picker, and one-click PDF export. No account needed.",
     role: "Solo",
-    year: "2025",
+    year: "2024",
     stack: ["Next.js 15", "React 19", "Tailwind CSS", "Zustand", "dnd-kit"],
     image: null,
     previewBg: "#06b6d4",
