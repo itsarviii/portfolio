@@ -69,7 +69,7 @@ function MobileStack() {
                 {project.links.live ? (
                   <div className="absolute inset-x-4 top-4">
                     <BrowserMockup
-                      src={screenshotSrc(project.links.live)}
+                      src={project.image ?? screenshotSrc(project.links.live)}
                       alt={project.title}
                       domain={stripProtocol(project.links.live)}
                       sizes="(max-width: 640px) 90vw, 540px"
@@ -127,7 +127,7 @@ function PreviewContent({ project, index }: PreviewContentProps) {
     >
       {liveUrl ? (
         <BrowserMockup
-          src={screenshotSrc(liveUrl)}
+          src={project.image ?? screenshotSrc(liveUrl)}
           alt={project.title}
           domain={stripProtocol(liveUrl)}
           tilt

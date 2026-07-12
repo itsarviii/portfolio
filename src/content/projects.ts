@@ -26,7 +26,7 @@ export const projects: Project[] = [
     role: "Solo",
     year: "2026",
     stack: ["React 19", "Django 5", "PostgreSQL", "Gemini API", "Tailwind CSS", "Framer Motion"],
-    image: null,
+    image: "/images/projects/unisphere.png",
     previewBg: "#6366f1",
     links: {
       live: "https://unisphere-aru.vercel.app",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     role: "Solo",
     year: "2025",
     stack: ["Next.js 15", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui"],
-    image: null,
+    image: "/images/projects/specmaster.png",
     previewBg: "#f59e0b",
     links: {
       live: "https://specmaster-app.vercel.app",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     role: "Solo",
     year: "2024",
     stack: ["Next.js 15", "React 19", "Tailwind CSS", "Zustand", "dnd-kit"],
-    image: null,
+    image: "/images/projects/optima-resume.png",
     previewBg: "#06b6d4",
     links: {
       live: "https://optima-resume.vercel.app",

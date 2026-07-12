@@ -30,7 +30,7 @@ function Chrome({ src, alt, domain, sizes, className }: Omit<BrowserMockupProps,
           src={src}
           alt={alt}
           fill
-          unoptimized
+          unoptimized={src.startsWith("http")}
           sizes={sizes ?? "800px"}
           className="object-cover object-top"
         />
